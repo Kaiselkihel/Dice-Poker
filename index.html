@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dice Poker</title>
+<link href="styles/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="styles/css-reset.css" rel="stylesheet" type="text/css" />
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61430505-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<header>
+<h1 class="board">Dice Poker</h1>
+</header>
+<main>
+	<section>
+	
+		<article class="computerside">
+			<p class="computermoney">Computer's current money: $<span id="c_currentAmount">200</span></p>
+			<div id="computerDice" class="dicebox computer">
+				<h2>Computer's hand: <span id="computerHand" class="rankhand"></span></h2>
+				<div id="dieBox_computer1" class="diebox"><img src="images/empty.gif" width="90px" height="90px" id="dieImage_c1" class="dieimage"></div>
+				<div id="dieBox_computer2" class="diebox"><img src="images/empty.gif" width="90px" height="90px" id="dieImage_c2" class="dieimage"></div>
+				<div id="dieBox_computer3" class="diebox"><img src="images/empty.gif" width="90px" height="90px" id="dieImage_c3" class="dieimage"></div>
+				<div id="dieBox_computer4" class="diebox"><img src="images/empty.gif" width="90px" height="90px" id="dieImage_c4" class="dieimage"></div>
+				<div id="dieBox_computer5" class="diebox"><img src="images/empty.gif" width="90px" height="90px" id="dieImage_c5" class="dieimage"></div>
+			</div>
+			<button id="tutorial" class="tutorialbutton">How to Play</button>
+			<button id="stat" class="statbutton">Stat</button>
+		</article>
+
+		<article class="centerdisplay">
+			<div class="betpotsection">
+				<h2>Pot: $<span id="currentPot" class="betpot"></span></h2>
+			</div>
+			<div class="textsection">
+				<h1 id="centerNotice" class="notification"></h1>
+			</div>
+			<div class="replaysection">
+				<button id="replayYes" class="yesbutton">Continue</button>
+				<button id="replayNo" class="nobutton">Quit</button>
+			</div>
+		</article>
+		
+		<article class="playerside">
+			<button id="pressRoll" class="rollbutton" disabled>Roll</button>
+			<button id="pressKeep" class="keepbutton" disabled>Keep</button>
+			<button id="reference" class="referencebutton">Score Reference</button>
+			
+			<div id="playerDice" class="dicebox player">
+				<h2>Your hand: <span id="playerHand" class="rankhand"></span></h2>
+				<div id="dieBox_player1" class="diebox">
+					<img src="images/empty.gif" width="90px" height="90px" id="dieImage_p1" class="dieimage">
+					<div class="rerollbox">
+						<button id="reroll1" class="rerollbutton reroll1" disabled>Hold</button>
+					</div>
+				</div>
+				
+				<div id="dieBox_player2" class="diebox">
+					<img src="images/empty.gif" width="90px" height="90px" id="dieImage_p2" class="dieimage">
+					<div class="rerollbox">
+						<button id="reroll2" class="rerollbutton reroll2" disabled>Hold</button>
+					</div>
+				</div>
+				
+				<div id="dieBox_player3" class="diebox">
+					<img src="images/empty.gif" width="90px" height="90px" id="dieImage_p3" class="dieimage">
+					<div class="rerollbox">
+						<button id="reroll3" class="rerollbutton reroll3" disabled>Hold</button>
+					</div>
+				</div>
+				
+				<div id="dieBox_player4" class="diebox">
+					<img src="images/empty.gif" width="90px" height="90px" id="dieImage_p4" class="dieimage">
+					<div class="rerollbox">
+						<button id="reroll4" class="rerollbutton reroll4" disabled>Hold</button>
+					</div>
+				</div>
+				
+				<div id="dieBox_player5" class="diebox">
+					<img src="images/empty.gif" width="90px" height="90px" id="dieImage_p5" class="dieimage">
+					<div class="rerollbox">
+						<button id="reroll5" class="rerollbutton reroll5" disabled>Hold</button>
+					</div>
+				</div>
+			</div>
+			
+			<form id="bettingMoney" class="betsection">
+				<label for="bettingAmount">Your current money: $<span id="p_currentAmount">200</span></label>
+				<input id="bettingAmount" type="number" class="bettingnumber" readonly style="border:0; color:#000000; font-weight:bold; font-size:25px;">
+				<input id="betYourMoney" type="submit" value="Bet" class="submitbet" disabled>
+				<p>Move the Slider to Place the Bet!</p>
+			</form>
+			<div id="betSlider"></div>
+		</article>
+		
+	</section>
+</main>
+<footer class="board">
+<p>&copy; 2015 Taylor Lee</p>
+</footer>
+<script>
+var referenceButton=document.getElementById('reference');
+referenceButton.addEventListener('click', openReference, true);
+function openReference(){
+	window.open("score-reference.html", "_blank", "width=960, height=600");
+}
+var tutorialButton=document.getElementById('tutorial');
+tutorialButton.addEventListener('click', howToPlay, true);
+function howToPlay(){
+	window.open("tutorial.html", "_blank", "width=960, height=600");
+}
+</script>
+<script src="scripts/jquery-1.11.2.min.js"></script>
+<script src="scripts/jquery-ui.min.js"></script>
+<script src="scripts/functions.js"></script>
+<script src="scripts/others.js"></script>
+<script src="scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* font-face */
+
+@font-face {
+    font-family: 'capture_itregular';
+    src: url('../fonts/Capture_it-webfont.eot');
+    src: url('../fonts/Capture_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Capture_it-webfont.woff') format('woff'),
+         url('../fonts/Capture_it-webfont.ttf') format('truetype'),
+         url('../fonts/Capture_it-webfont.svg#capture_itregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'troikaregular';
+    src: url('../fonts/troika-webfont.eot');
+    src: url('../fonts/troika-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/troika-webfont.woff') format('woff'),
+         url('../fonts/troika-webfont.ttf') format('truetype'),
+         url('../fonts/troika-webfont.svg#troikaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* end of font-face */
+
+
+
+body {
+	background-image: url(../images/stardust.png);
+}
+
+main {
+	background-color: rgba(8,157,20,0.7);
+	overflow: auto;
+	width: 960px;
+	margin: 0 auto;
+	box-shadow: 1px 1px 5px 5px #0inset;
+	box-shadow: -1px -1px 5px 5px #000 inset;
+}
+
+h1, h2, p, label, input {
+	font-family: 'troikaregular';
+}
+
+button, .submitbet, header h2 {
+	font-family: 'capture_itregular';
+}
+
+/* header */
+
+header {
+	margin: 30px;
+}
+
+header h1 {
+	font-family: 'capture_itregular';
+	color: #fff;
+	text-align: center;
+	font-size: 70px;
+}
+
+header h2 {
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+/* end of header */
+
+
+
+/* content */
+
+section {
+	overflow: auto;
+	position: relative;
+}
+
+article {
+	margin: 20px;
+}
+
+
+
+/* center text notification section */
+
+.centerdisplay {
+	clear: both;
+	margin: 0;
+	width: 960px;
+	height: 110px;
+}
+
+.betpotsection {
+	float: left;
+	width: 220px;
+}
+
+.betpotsection h2 {
+	font-size: 35px;
+	line-height: 110px;
+	margin: 0 0 0 20px;
+}
+
+.textsection {
+	float: left;
+	width: 520px;
+	height: 100%;
+	display: table;
+}
+
+.textsection h1 {
+	font-size: 30px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.replaysection {
+	overflow: auto;
+	float: right;
+	width: 220px;
+	height: 110px;
+}
+
+.yesbutton {
+	float: left;
+	padding: 10px;
+	font-size: 20px;
+	margin: 32px 20px 0 4px;
+}
+
+.nobutton {
+	float: left;
+	padding: 10px;
+	font-size: 20px;
+	margin: 32px 0 0 0;
+}
+
+/* end of center notification section */
+
+
+
+.dicebox {
+	width: 570px;
+	height: 160px;
+	border: 1px solid #000;
+	background-color: #fff;
+}
+
+.dicebox.computer {
+	float: left;
+}
+
+.computermoney {
+	font-size: 25px;
+}
+
+.dicebox.player {
+	height: 180px;
+}
+
+.dicebox h2 {
+	margin: 10px 0 0 10px;
+	font-size: 20px;
+}
+
+.diebox {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 10px 10px;
+}
+
+.dieimage {
+	margin: 5px;
+	padding: 2px;
+	border: 1px solid #000;
+}
+
+.dieimage.selected {
+	padding: 0;
+	border: 3px solid red;
+}
+
+.statbutton {
+	float: right;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.tutorialbutton {
+	float: right;
+	margin: 0 0 0 30px;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.rollbutton {
+	margin: 0 0 20px 100px;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.keepbutton {
+	margin: 0 0 20px 30px;
+	padding: 10px;
+	font-size: 20px;
+}
+
+.referencebutton {
+	padding: 10px;
+	font-size: 20px;
+	margin: 0 0 20px 0;
+	float: right;
+}
+
+.rerollbox {
+	text-align: center;
+	width: 60px;
+	margin: 0 auto;
+	padding: 0 0 0 5px;
+}
+
+.computerside {
+	width: 920px;
+	clear: both;
+	float: left;
+}
+
+.playerside {
+	clear: both;
+	float: right;
+}
+
+.computermoney {
+	margin: 0 10px 10px 10px;
+}
+
+.betsection {
+	display: block;
+	width: 90%;
+	margin: 10px;
+}
+
+.score-reference h2 {
+	text-align: center;
+}
+
+.score-reference p {
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+label {
+	font-size: 25px;
+}
+
+.bettingnumber {
+	margin: 0 0 0 20px;
+	width: 60px;
+}
+
+.submitbet {
+	margin: 10px;
+	font-size: 20px;
+}
+
+.scorechart p {
+	font-size: 25px;
+	font-weight: initial;
+}
+
+.tutorial h1 {
+	font-size: 35px;
+}
+
+.tutorial p {
+	font-size: 25px;
+}
+
+/* end of content */
+
+
+
+/* footer */
+
+footer {
+	margin: 50px;
+	text-align: center;
+}
+
+footer p {
+	font-size: 20px;
+	color: #fff;
+}
+
+/* end of footer */
+
