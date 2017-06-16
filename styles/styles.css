@@ -75,12 +75,12 @@ header h2 {
 
 /* content */
 
-section {
+body > div {
 	overflow: auto;
 	position: relative;
 }
 
-article {
+body > div > div {
 	margin: 20px;
 }
 
