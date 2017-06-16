@@ -9,25 +9,15 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-61430505-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </head>
 <body>
 <header>
 <h1 class="board">Dice Poker</h1>
 </header>
 <main>
-	<section>
+	<div>
 	
-		<article class="computerside">
+		<div class="computerside">
 			<p class="computermoney">Computer's current money: $<span id="c_currentAmount">200</span></p>
 			<div id="computerDice" class="dicebox computer">
 				<h2>Computer's hand: <span id="computerHand" class="rankhand"></span></h2>
@@ -39,9 +29,9 @@
 			</div>
 			<button id="tutorial" class="tutorialbutton">How to Play</button>
 			<button id="stat" class="statbutton">Stat</button>
-		</article>
+		</div>
 
-		<article class="centerdisplay">
+		<div class="centerdisplay">
 			<div class="betpotsection">
 				<h2>Pot: $<span id="currentPot" class="betpot"></span></h2>
 			</div>
@@ -52,9 +42,9 @@
 				<button id="replayYes" class="yesbutton">Continue</button>
 				<button id="replayNo" class="nobutton">Quit</button>
 			</div>
-		</article>
+		</div>
 		
-		<article class="playerside">
+		<div class="playerside">
 			<button id="pressRoll" class="rollbutton" disabled>Roll</button>
 			<button id="pressKeep" class="keepbutton" disabled>Keep</button>
 			<button id="reference" class="referencebutton">Score Reference</button>
@@ -104,9 +94,9 @@
 				<p>Move the Slider to Place the Bet!</p>
 			</form>
 			<div id="betSlider"></div>
-		</article>
+		</div>
 		
-	</section>
+	</div>
 </main>
 <footer class="board">
 <p>&copy; 2015 Taylor Lee</p>
